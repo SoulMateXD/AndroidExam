@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zhangdesheng.androidexam.Activity.MusicInformation">
+
+    <ImageView
+        android:id="@+id/music_info_pic"
+        android:layout_width="270dp"
+        android:layout_height="270dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="#7e7e7e"/>
+
+    <TextView
+        android:id="@+id/music_info_songname"
+        android:layout_below="@id/music_info_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="歌曲名"
+        android:maxLines="1"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="30dp"/>
+
+    <TextView
+        android:id="@+id/music_info_singername"
+        android:layout_below="@id/music_info_songname"
+        android:layout_width="wrap_content"
+        android:text="歌手名"
+        android:layout_centerHorizontal="true"
+        android:textSize="25dp"
+        android:maxLines="1"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/music_info_buttons"
+        android:layout_below="@id/music_info_singername"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <SeekBar
+            android:id="@+id/music_info_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/hint_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="正在播放"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/play"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="播放"
+                android:layout_weight="1"/>
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="暂停"
+                android:id="@+id/puase"/>
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="停止"
+                android:id="@+id/stop"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/music_info_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/music_info_previous"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="上一首"
+            android:textSize="25dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/music_info_danquxunhuan"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="单曲循环"
+            android:textSize="25dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/music_info_next"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="下一首"
+            android:textSize="25dp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+</RelativeLayout>

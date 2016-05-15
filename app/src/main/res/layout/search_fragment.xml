@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        card_view:cardBackgroundColor="#ffffff"
+        card_view:cardCornerRadius="10dp"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        card_view:cardElevation="5dp"
+        >
+        <LinearLayout
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:id="@+id/search_frag_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/search_frag_search_text"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="40dp"
+                android:maxLines="1"
+                android:textSize="15dp"
+                android:hint="请输入歌名/歌手名"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center_vertical"
+                />
+
+            <ImageView
+                android:id="@+id/search_frag_launch_search"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_search"
+                android:layout_gravity="center_vertical"/>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/search_frag_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></android.support.v7.widget.RecyclerView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            android:id="@+id/search_frag_previous_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上一页"
+            android:textSize="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:id="@+id/search_frag_currentpage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text=""
+            android:textSize="20dp"
+            android:textColor="#28c705"/>
+
+        <TextView
+            android:id="@+id/search_frag_next_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="下一页"
+            android:textSize="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
